@@ -50,4 +50,5 @@ fmt.Println("hello, world.")
 	fmt.Println(" using my_number := 0b1010 ", my_number)
 	my_number = 0xBadFace
 	fmt.Println(" using my_number := 0xBadFace ", my_number)
+	fmt.Println("Giving up on this program because I got bored")
 }
