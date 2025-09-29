@@ -33,6 +33,7 @@ func main(){
 	fmt.Print("Choose an option =>")
 	text, _ = keyboard.ReadString('\n')
 	text = strings.ToLower(strings.TrimSpace(text))
+	// test
 
 	if text == options[0] {
 		fmt.Println("Option:", options[0])
