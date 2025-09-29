@@ -7,6 +7,9 @@ import(
 	"strings"
 )
 
+func helpms() {
+fmt.Println(" ***** HELP MENU ***** ")
+fmt.Println("
 func main(){
 	// there are better ways to store the to do list items, like for example, they could have due dates, and descriptions, titles etc.
 	// here, it is just a list with no due date, you can remove, add things etc. There is room to improve, but the overall idea
@@ -33,7 +36,24 @@ func main(){
 	fmt.Print("Choose an option =>")
 	text, _ = keyboard.ReadString('\n')
 	text = strings.ToLower(strings.TrimSpace(text))
-	// test
+	// make this a loop that terminates when the user types q, then q. h displays a help menu
+	help_menu_key := "h"
+	quit_menu_key := "q"
+	sentinel := false
+    scanner := bufio.NewScanner(os.Stdin)
+	for ; !sentinel; {
+	for scanner.Scan() {
+		// Get the text from the current line
+		input := scanner.Text()
+
+		// Check for an exit condition
+		if input == quit_menu_key {
+			fmt.Println("Exiting program.")
+			exit
+		}
+			if input == help_menu_key {
+		helpmsg()
+}
 
 	if text == options[0] {
 		fmt.Println("Option:", options[0])
@@ -57,5 +77,5 @@ func main(){
 	} else {
 		fmt.Println("Unknown option.")
 	}
-
+	}
 }
