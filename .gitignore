@@ -1,2 +1,4 @@
 # Compiled Go Binaries
 ./hello_world/main
+./slices/main
+./todo/main
